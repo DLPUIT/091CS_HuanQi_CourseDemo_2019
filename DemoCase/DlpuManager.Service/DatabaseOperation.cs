@@ -1,4 +1,4 @@
-﻿namespace Case2
+﻿namespace DlpuManager.Service
 {
     using SquirrelFramework.Repository;
 
