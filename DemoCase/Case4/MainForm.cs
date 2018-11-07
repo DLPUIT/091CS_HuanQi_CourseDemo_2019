@@ -21,11 +21,12 @@
 
         public void LoadData()
         {
-            // Way 1: 水军写法
             var allMember = this.service.GetAllMember();
-            this.dataGridViewAllUser.DataSource = allMember;
+            
+            // Way 1: 水军写法
+            //this.dataGridViewAllUser.DataSource = allMember;
 
-            // Way 2: 正规写法
+            // Way 2: 正规写法，去除或隐藏无用的列字段
             var dataTable = new DataTable();
             dataTable.Columns.Add("姓名", typeof(string));
             dataTable.Columns.Add("班级 ID", typeof(string));
@@ -46,7 +47,7 @@
         {
             //var name = this.dataGridViewAllUser.CurrentRow.Cells[1].Value;
 
-            // SelectionMode 属性！！！
+            // 记得设置 SelectionMode 属性！！！否则总是点选一个单元格
 
             if (this.dataGridViewAllUser.SelectedRows.Count < 1) { return; }
             var currentSelectedMemberName = (string)this.dataGridViewAllUser.SelectedRows[0].Cells["姓名"].Value;
@@ -61,6 +62,20 @@
         private void buttonSync_Click(object sender, EventArgs e)
         {
             this.LoadData();
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("咋做编辑功能呢？自己好好想想。", "加油！", MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            var infoWindow = new MemberInfoForm(new User(), EditMode.Create);
+
+            infoWindow.Show();
+            // 更好的方式是下边这种: 为什么？
+            // infoWindow.ShowDialog();
         }
     }
 }
