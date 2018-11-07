@@ -59,6 +59,7 @@
             this.dataGridViewAllUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewAllUser.Size = new System.Drawing.Size(1031, 445);
             this.dataGridViewAllUser.TabIndex = 0;
+            this.dataGridViewAllUser.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAllUser_CellDoubleClick);
             // 
             // buttonDelete
             // 

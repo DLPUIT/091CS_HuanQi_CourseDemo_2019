@@ -77,5 +77,14 @@
             // 更好的方式是下边这种: 为什么？
             // infoWindow.ShowDialog();
         }
+
+        private void dataGridViewAllUser_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dataGridViewAllUser.SelectedRows.Count < 1) { return; }
+            var currentSelectedMemberName = (string)this.dataGridViewAllUser.SelectedRows[0].Cells["姓名"].Value;
+            var user = this.service.FindMember(currentSelectedMemberName);
+            var infoWindow = new MemberInfoForm(user, EditMode.View);
+            infoWindow.ShowDialog();
+        }
     }
 }
