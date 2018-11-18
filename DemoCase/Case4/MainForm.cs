@@ -66,7 +66,11 @@
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("咋做编辑功能呢？自己好好想想。", "加油！", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            if (this.dataGridViewAllUser.SelectedRows.Count < 1) { return; }
+            var currentSelectedMemberName = (string)this.dataGridViewAllUser.SelectedRows[0].Cells["姓名"].Value;
+            var userInfo = this.service.FindMember(currentSelectedMemberName);
+            var infoWindow = new MemberInfoForm(userInfo, EditMode.Edit);
+            infoWindow.Show();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

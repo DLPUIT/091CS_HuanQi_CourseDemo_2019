@@ -48,10 +48,18 @@
             switch (this.mode)
             {
                 case EditMode.Create:
+                    this.user.Name = this.textBoxName.Text;
+                    this.user.ClassId = this.textBoxClassId.Text;
+                    this.user.Credits = int.Parse(this.textBoxCredit.Text);
+                    this.user.GitHub = this.textBoxGitHub.Text;
                     this.service.AddMember(this.user);
                     break;
 
                 case EditMode.Edit:
+                    this.user.Name = this.textBoxName.Text;
+                    this.user.ClassId = this.textBoxClassId.Text;
+                    this.user.Credits = int.Parse(this.textBoxCredit.Text);
+                    this.user.GitHub = this.textBoxGitHub.Text;
                     this.service.UpdateMember(this.user);
                     break;
 
