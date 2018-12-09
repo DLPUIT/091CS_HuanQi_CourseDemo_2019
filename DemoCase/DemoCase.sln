@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNotepad", "MyNotepad\MyNo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPictureViewer", "MyPictureViewer\MyPictureViewer.csproj", "{C4053B97-00AB-442C-B6D9-9ACBF9C332C6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 单例模式", "5 单例模式", "{A1E53746-DC01-4D52-8B9B-7FCCB394578C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{667D60BB-8E95-4BE7-94B4-E31148C4730E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,10 @@ Global
 		{C4053B97-00AB-442C-B6D9-9ACBF9C332C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4053B97-00AB-442C-B6D9-9ACBF9C332C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4053B97-00AB-442C-B6D9-9ACBF9C332C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{667D60BB-8E95-4BE7-94B4-E31148C4730E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667D60BB-8E95-4BE7-94B4-E31148C4730E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667D60BB-8E95-4BE7-94B4-E31148C4730E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667D60BB-8E95-4BE7-94B4-E31148C4730E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +104,7 @@ Global
 		{9B534C6D-0C81-4AE8-B340-7489850D4C80} = {AE0755A2-8B04-468B-B5CA-240298ABDCEF}
 		{4B904C91-C1D4-4A07-AE45-B193F7534A7D} = {D4A5AA02-BACF-4644-958F-D369D2598AA9}
 		{C4053B97-00AB-442C-B6D9-9ACBF9C332C6} = {7DFB820E-B739-438A-B1CB-D453F7F741F5}
+		{667D60BB-8E95-4BE7-94B4-E31148C4730E} = {A1E53746-DC01-4D52-8B9B-7FCCB394578C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5E24349B-380D-44C4-AFD8-E2882F22C949}
